@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
     <script>
+        function aa(){
+            alert(1)
+        }
         $(document).ready(function(){
-            $.get('http://zerg.com/api/v1/wxnews',function (t) {
-                console.log(t)
-            })
+
+
+            var script = document.createElement('script');
+            script.src = 'http://zerg.com/api/v1/wxnews';
+            $(script).appendTo($('html'));
+
         });
     </script>
 </head>
